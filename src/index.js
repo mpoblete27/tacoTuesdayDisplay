@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import TuesdayDisplay from "./TuesdayDisplay";
-import CountdownTimer from "./CountdownTimer";
+import NotTuesdayBanner from "./NotTuesdayBanner";
+import CountDown from "./CountDown";
 
 class App extends React.Component {
     state = { date: ''};
@@ -9,7 +10,11 @@ class App extends React.Component {
     componentDidMount() {
         const daysOfTheWeek = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
         let day = daysOfTheWeek[ new Date().getDay() ];
-        this.setState({date:day});
+        this.setState({date:day, numberOfDays:waiting});
+
+        const week = ['Wednesday','Thursday','Friday','Saturday','Sunday','Monday','Tuesday'];
+        let waiting =  week[6]-week[ new Date().getDay() ];
+    
     }
 
     render() {
@@ -23,8 +28,9 @@ class App extends React.Component {
         }
         return(
                 <div>
-                    <CountdownTimer />
+                    <NotTuesdayBanner />
                     {/* add countdown to the next tuesday */}
+                    <CountDown daysLeft={this.state.numberOfDays} />
                 </div>
             );
         
