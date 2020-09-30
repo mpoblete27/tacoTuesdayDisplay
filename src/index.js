@@ -10,10 +10,9 @@ class App extends React.Component {
     componentDidMount() {
         const daysOfTheWeek = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
         let day = daysOfTheWeek[ new Date().getDay() ];
-        this.setState({date:day, numberOfDays:waiting});
+        this.setState({date:day});
 
-        const week = ['Wednesday','Thursday','Friday','Saturday','Sunday','Monday','Tuesday'];
-        let waiting =  week[6]-week[ new Date().getDay() ];
+        
     
     }
 
@@ -30,7 +29,7 @@ class App extends React.Component {
                 <div>
                     <NotTuesdayBanner />
                     {/* add countdown to the next tuesday */}
-                    <CountDown daysLeft={this.state.numberOfDays} />
+                    <CountDown />
                 </div>
             );
         
