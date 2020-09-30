@@ -11,16 +11,12 @@ class App extends React.Component {
         const daysOfTheWeek = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
         let day = daysOfTheWeek[ new Date().getDay() ];
         this.setState({date:day});
-
-        
-    
     }
 
     render() {
         if(this.state.date === 'Tuesday') {
             return(
                 <div>
-                    {/* It's tuesday, import the TacoDisplay */}
                     <TuesdayDisplay today={this.state.date}/>
                 </div>
             );
@@ -28,7 +24,6 @@ class App extends React.Component {
         return(
                 <div>
                     <NotTuesdayBanner />
-                    {/* add countdown to the next tuesday */}
                     <CountDown />
                 </div>
             );

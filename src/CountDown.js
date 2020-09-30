@@ -13,7 +13,7 @@ const CountDown = () => {
             daysLeft = 0; 
             break;
         case 3:
-            daysLeft = "There are 6 days left";
+            daysLeft = 6;
             break;
         case 4:
             daysLeft = 5;   
@@ -25,15 +25,10 @@ const CountDown = () => {
             daysLeft = 3;
             break;
         default:
-            daysLeft = "default statement required" //added to prevent warning
+            daysLeft = "default statement added" //added to prevent warning
         };
-    console.log(daysLeft);
 
-    return(
-        <div>
-            daysLeft
-        </div>
-    )
+    return <h1>there are {daysLeft} days left until the next Taco Tuesday</h1>
 };
 
 export default CountDown;
