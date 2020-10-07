@@ -4,8 +4,9 @@ const NotTuesdayBanner = () => {
     return (
         <div>
             <h1 style={{color:'purple',backgroundColor:'lightblue'}}>
-            It's not tuesday yet
-        </h1>
+                It's not tuesday yet
+            </h1>
+            
         </div>
     );
 };
