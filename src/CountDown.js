@@ -28,7 +28,7 @@ const CountDown = () => {
             daysLeft = "default statement added" //added to prevent warning
         };
 
-    return <h1>there are {daysLeft} days left until the next Taco Tuesday</h1>
+    return <h1>There are {daysLeft} days left until the next Taco Tuesday</h1>
 };
 
 export default CountDown;

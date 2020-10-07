@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import TuesdayDisplay from "./TuesdayDisplay";
 import NotTuesdayBanner from "./NotTuesdayBanner";
+import TacoSigns from './TacoSigns';
 import CountDown from "./CountDown";
 
 class App extends React.Component {
@@ -25,14 +26,9 @@ class App extends React.Component {
                 <div>
                     <NotTuesdayBanner />
                     <CountDown />
+                    <TacoSigns />
                 </div>
             );
-        
-        // return(
-        //     <div>
-        //         The Day of the week is is: {this.state.date}
-        //     </div>
-        // )
     }
 };
 
