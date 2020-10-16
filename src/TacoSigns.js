@@ -5,9 +5,8 @@ const arrayOfSayings = ["If you don't like tacos, I'm nacho type", "You look sad
 let randomSaying = arrayOfSayings[Math.floor(Math.random()*arrayOfSayings.length)];
 
 const TacoSigns = () => {
-    console.log(randomSaying);
     return (
-        <h1>A random saying about tacos goes here</h1>
+        <h1 style={{backgroundColor: "#ff7b25", color: "#feb236" }}>{randomSaying}</h1>
     );
 };
 export default TacoSigns;
