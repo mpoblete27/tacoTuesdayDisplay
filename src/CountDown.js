@@ -27,8 +27,17 @@ const CountDown = () => {
         default:
             daysLeft = "default statement added" //added to prevent warning
         };
+    let isPlural;
+    let isAre;
+    if (daysLeft === 1) {
+        isAre = "is";
+        isPlural = "day";
+    } else {
+        isAre = "are"
+        isPlural = "days"
+    };
 
-    return <h1>There are {daysLeft} days left until the next Taco Tuesday</h1>
+    return <h1>There {isAre} {daysLeft} {isPlural} left until the next Taco Tuesday</h1>
 };
 
 export default CountDown;
